@@ -94,4 +94,18 @@ function permute(H ::Matrix{HydraSummary},n_perm = 1000)
     return P
 end
 
+function permute(H ::Matrix{HydraSummary},levels ::Vector,n_perm = 1000)
+    n = size(H)[1]
+    P = zeros(n,n)
+
+    Threads.@threads for i in 2:n
+                        for j in 1:i-1
+                            P[i,j] = permute(H[i,j],n_perm)
+                        end
+                    end
+                    P[1,n] = permute(H[1,n])
+    return NamedArray(P,(levels,levels))
+end
+
+
 
