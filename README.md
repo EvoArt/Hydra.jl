@@ -18,4 +18,5 @@ The function function `hydra2` expects:
 
 This function returns a `HydraSummary` struct when pairs == `false` and an array of `HydraSummary`s when pairs == `true`.
 
-`permute` accepts a `HydraSummary` or array thereof, as well al the desired number of permutations. P-Values are calculated by simultaneous permutation of rows and columns.
+`permute` accepts a `HydraSummary` or array thereof, as well al the desired number of permutations. P-Values are calculated by simultaneous permutation of rows and columns. If an array is passed in, thenan Array will be returned, with pairwise P-values in the lower triangle and the global P-value in the top right. Optionally, when permuting an array of pairwise results, a vector of level names (in lexographical order) or the full vector/column used as the independent variable in `hydra2` may be passed as an argument after the array. This will return a Named array, with appropriate column and row names.
+
