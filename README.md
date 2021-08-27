@@ -8,7 +8,9 @@
 PERMANOVA implementation Based on the work of Marti Anderson. This package aims to provide similar functionality to the `adonis2` in the R package `vegan`. In keeping with names from mythology, the many headed Lernaean Hydra represents the multivariate response data we aim to tackle here. Though perhaps Heracles or Iolis (the eventual slayers of the Hydra) would be more apt.
 
 ![alt text](https://github.com/EvoArt/Hydra/blob/master/docs/Sargent_Hercules.jpg?raw=true)
+<img src="https://github.com/EvoArt/Hydra/blob/master/docs/Sargent_Hercules.jpg" alt="drawing" width="200"/>
 
+<img src="https://github.com/EvoArt/Hydra/blob/master/docs/Sargent_Hercules.jpg" alt="drawing" width="100"/>
 The function function `hydra2` expects:
 
 *   data: a table/dataframe with a column containing the independent variable. 
