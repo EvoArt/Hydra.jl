@@ -95,6 +95,7 @@ function permute(H ::Matrix{HydraSummary},n_perm = 1000)
 end
 
 function permute(H ::Matrix{HydraSummary},levels ::Vector,n_perm = 1000)
+    levels = unique(levels)
     n = size(H)[1]
     P = zeros(n,n)
 
