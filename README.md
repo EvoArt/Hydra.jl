@@ -12,10 +12,12 @@ PERMANOVA implementation Based on the work of Marti Anderson. This package aims 
 The function function `hydra2` expects:
 
 *   data: a table/dataframe with a column containing the independent variable. 
-*   D: a distance matix
+*   y: the depentent variables, where each row is an observation
+*   metric: distance metric to be used.
 * formula: a [StatsModels.jl](https://juliastats.org/StatsModels.jl/stable/formula/) formula 
 *    pairs: and optional keyword boolean argument, telling hydra2 to also compute pairwise statistics.
 
+Alternatively, instead of y and metric, pass in a distance matrix D.
 This function returns a `HydraSummary` struct when pairs == `false` and an array of `HydraSummary`s when pairs == `true`.
 
 `permute` accepts a `HydraSummary` or array thereof, as well al the desired number of permutations. P-Values are calculated by simultaneous permutation of rows and columns. If an array is passed in, thenan Array will be returned, with pairwise P-values in the lower triangle and the global P-value in the top right. Optionally, when permuting an array of pairwise results, a vector of level names (in lexographical order) or the full vector/column used as the independent variable in `hydra2` may be passed as an argument after the array. This will return a Named array, with appropriate column and row names.
