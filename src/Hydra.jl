@@ -1,5 +1,9 @@
 module Hydra
 
-# Write your package code here.
+using Random, LinearAlgebra, Distances, NamedArrays, StatsModels,Statistics
+include("hydra2.jl")
+
+export hydra2, permute, @formula
+
 
 end

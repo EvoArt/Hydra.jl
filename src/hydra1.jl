@@ -4,7 +4,6 @@
 #the sum of squared interpoint distancesdivided by the number of points
 # https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1442-9993.2001.01070.pp.x
 
-using Random, LinearAlgebra, Distances, NamedArrays
 SS(D,N) = sum(D .^2)/N 
 
 function F(D,W,N,n,a)
